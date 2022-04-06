@@ -33,7 +33,7 @@ jobs:
          max_instances: 5
          memory_mb: 2048
          event_trigger_resource: projects/${{ secrets.GCP_PROJECT_ID }}/buckets/cloudfuntion
-         build_environment_variables: flask>=2.1
+
          timeout: 540s
          deploy_timeout: 900s
         
