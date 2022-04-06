@@ -16,7 +16,7 @@ jobs:
         credentials_json: '${{ secrets.GCP_DEFAULT_ACCOUNT_KEY_STAGING }}'
 
     - name: Deploy Cloud Function
-        id: deploy
+      id: deploy
       uses: google-github-actions/deploy-cloud-functions@main
       with:
         name: myfirstcloudfunction
