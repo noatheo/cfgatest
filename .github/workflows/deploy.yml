@@ -1,4 +1,4 @@
-name: Deploy Cloud Function to GCP - Staging
+name: Deploy Cloud Function to GCP 
 
 on:
   push:
