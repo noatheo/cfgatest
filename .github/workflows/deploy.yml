@@ -17,18 +17,18 @@ jobs:
 
     - name: Deploy Cloud Function
         id: deploy
-        uses: google-github-actions/deploy-cloud-functions@main
-        with:
-          name: myfirstcloudfunction
-          runtime: python39
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
-          entry_point: hello_gcs
-          event_trigger_type: google.storage.object.finalize
-          min_instances: 2
-          max_instances: 5
-          memory_mb: 2048
-          event_trigger_resource: projects/${{ secrets.GCP_PROJECT_ID }}/buckets/cloudfuntion
-          build_environment_variables: flask>=2.1
-          timeout: 540s
-          deploy_timeout: 900s
+      uses: google-github-actions/deploy-cloud-functions@main
+      with:
+        name: myfirstcloudfunction
+        runtime: python39
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        entry_point: hello_gcs
+        event_trigger_type: google.storage.object.finalize
+        min_instances: 2
+        max_instances: 5
+        memory_mb: 2048
+        event_trigger_resource: projects/${{ secrets.GCP_PROJECT_ID }}/buckets/cloudfuntion
+        build_environment_variables: flask>=2.1
+        timeout: 540s
+        deploy_timeout: 900s
         
