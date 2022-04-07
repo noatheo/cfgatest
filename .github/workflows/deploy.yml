@@ -27,7 +27,7 @@ jobs:
          name: myfirstcloudfunction
          runtime: python39
          project_id: ${{ secrets.GCP_PROJECT_ID }}
-         
+         entry_point: hello_gcs
          event_trigger_type: google.storage.object.finalize
          min_instances: 2
          max_instances: 5
