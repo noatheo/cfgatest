@@ -16,5 +16,9 @@ jobs:
      - name: Find out what branch is beigned pushed 
        run: echo '::set-output name=SELECTED_COLOR::green'
        
-       
+     - name: run a normal command
+       run: echo 'Hello world'
+
+     - name: git the branches 
+       run: git branch -r 
        
